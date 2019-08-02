@@ -1,0 +1,8 @@
+*.idea
+*.xml
+*.lock
+.DS_Store
+node_modules
+*.log
+.eslintrc
+.env
