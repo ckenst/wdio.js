@@ -4,7 +4,7 @@
   "description": "Examples of [webdriver.io](http://webdriver.io/) v5 in action.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./node_modules/.bin/wdio ./wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,20 @@
   "bugs": {
     "url": "https://github.com/ckenst/wdio5.js/issues"
   },
-  "homepage": "https://github.com/ckenst/wdio5.js#readme"
+  "homepage": "https://github.com/ckenst/wdio5.js#readme",
+  "devDependencies": {
+    "@wdio/local-runner": "^5.18.7",
+    "@wdio/mocha-framework": "^5.18.7",
+    "@wdio/spec-reporter": "^5.18.7",
+    "@wdio/sync": "^5.18.7",
+    "chai": "^4.2.0",
+    "chai-webdriverio": "^1.0.0",
+    "chromedriver": "^80.0.1",
+    "prettier": "^1.19.1",
+    "wdio-chromedriver-service": "^5.0.2",
+    "webdriverio": "^5.18.7"
+  },
+  "dependencies": {
+    "@wdio/cli": "^5.18.7"
+  }
 }
