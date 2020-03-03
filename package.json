@@ -1,0 +1,20 @@
+{
+  "name": "wdio5.js",
+  "version": "1.0.0",
+  "description": "Examples of [webdriver.io](http://webdriver.io/) v5 in action.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckenst/wdio5.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckenst/wdio5.js/issues"
+  },
+  "homepage": "https://github.com/ckenst/wdio5.js#readme"
+}
