@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ckenst/wdio5.js#readme",
   "devDependencies": {
+    "@wdio/cli": "^5.18.7",
     "@wdio/local-runner": "^5.18.7",
     "@wdio/mocha-framework": "^5.18.7",
     "@wdio/spec-reporter": "^5.18.7",
@@ -28,8 +29,5 @@
     "prettier": "^1.19.1",
     "wdio-chromedriver-service": "^5.0.2",
     "webdriverio": "^5.18.7"
-  },
-  "dependencies": {
-    "@wdio/cli": "^5.18.7"
   }
 }
