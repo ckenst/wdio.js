@@ -18,6 +18,10 @@ class Internet {
     return this.parent.$$("li");
   }
 
+  get FirstLink() {
+    return $("ul li:nth-child(1) a");
+  }
+
   specificChildElement(index) {
     return this.parent.$(`li:nth-child(${index})`);
   }
@@ -29,7 +33,14 @@ class Internet {
   }
 
   getSpecificElementText(index) {
-    console.log(this.specificChildElement(index).getText());
+    return this.specificChildElement(index).getText();
+  }
+
+  clickOnLInk() {
+      if(this.FirstLink.isDisplayed() === true) {
+          this.FirstLink.click()
+      }
+      browser.pause(5000)
   }
 }
 module.exports = new Internet();
