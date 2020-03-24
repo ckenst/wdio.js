@@ -54,7 +54,7 @@ exports.config = {
       // grid with only 5 firefox instances available you can make sure that not more than
       // 5 instances get started at a time.
       maxInstances: 3,
-      browserName: "chrome",
+      browserName: "firefox",
       // 'goog:chromeOptions': {
         // args: [
         //   '--headless',
@@ -117,7 +117,7 @@ exports.config = {
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  services: ["chromedriver"],
+  // services: ["chromedriver"],
 
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber
@@ -174,7 +174,7 @@ exports.config = {
    * @param {Array.<String>} specs List of spec file paths that are to be run
    */
   before: function (capabilities, specs) {
-    browser.setWindowSize(375, 667);
+    browser.setWindowSize(1440, 900);
   },
   /**
    * Runs before a WebdriverIO command gets executed.
