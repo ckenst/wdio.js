@@ -9,7 +9,9 @@ exports.config = {
   runner: "local",
   //
   // Override default path ('/wd/hub') for chromedriver service.
-  path: "/",
+  hostname: 'localhost',
+  port: 4444,
+  path: '/wd/hub',
   //
   // ==================
   // Specify Test Files
@@ -40,7 +42,7 @@ exports.config = {
   // and 30 processes will get spawned. The property handles how many capabilities
   // from the same test should run tests.
   //
-  maxInstances: 10,
+  maxInstances: 2,
   //
   // If you have trouble getting all important capabilities together, check out the
   // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -51,9 +53,17 @@ exports.config = {
       // maxInstances can get overwritten per capability. So if you have an in-house Selenium
       // grid with only 5 firefox instances available you can make sure that not more than
       // 5 instances get started at a time.
-      maxInstances: 5,
-      //
+      maxInstances: 3,
       browserName: "chrome",
+      // 'goog:chromeOptions': {
+        // args: [
+        //   '--headless',
+        //   '--disable-gpu',
+        //   '--window-size=800,600'
+        // ] 
+        // mobileEmulation: { deviceName: 'iPhone X' }
+      // },
+
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
       // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -163,8 +173,9 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {Array.<String>} specs List of spec file paths that are to be run
    */
-  // before: function (capabilities, specs) {
-  // },
+  before: function (capabilities, specs) {
+    browser.setWindowSize(375, 667);
+  },
   /**
    * Runs before a WebdriverIO command gets executed.
    * @param {String} commandName hook command name
