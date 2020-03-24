@@ -11,19 +11,19 @@ describe("Interacting with elements", function() {
     internetPage.getSpecificElementText(3);
   });
 
-  it('Is footer displayed?', () => {
+  it("Is footer displayed?", () => {
     console.log(internetPage.pageFooter.isDisplayed());
   });
 
-  it('Does the header exist?', () => {
+  it("Does the header exist?", () => {
     console.log(internetPage.pageHeader.isExisting());
   });
 
-  it('Is footer in viewport?', () => {
+  it("Is footer in viewport?", () => {
     console.log(internetPage.pageFooter.isDisplayedInViewport());
-  })
+  });
 
-  it('Click Element', () => {
+  it("Click Element", () => {
     internetPage.clickOnLInk();
-  })
+  });
 });
