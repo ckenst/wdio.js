@@ -1,3 +1,11 @@
+const url = require('./urls')
+const ENV = process.env.ENV
+
+if(!ENV || !['qa', 'dev', 'staging'].includes(ENV)) {
+  console.log('Please us the following format when running the test script: ENV=qa|dev|staging')
+  process.exit()
+};
+
 exports.config = {
   //
   // ====================
@@ -9,9 +17,9 @@ exports.config = {
   runner: "local",
   //
   // Override default path ('/wd/hub') for chromedriver service.
-  hostname: 'localhost',
+  hostname: "localhost",
   port: 4444,
-  path: '/wd/hub',
+  path: "/wd/hub",
   //
   // ==================
   // Specify Test Files
@@ -54,14 +62,14 @@ exports.config = {
       // grid with only 5 firefox instances available you can make sure that not more than
       // 5 instances get started at a time.
       maxInstances: 3,
-      browserName: "firefox",
+      browserName: "chrome",
       // 'goog:chromeOptions': {
-        // args: [
-        //   '--headless',
-        //   '--disable-gpu',
-        //   '--window-size=800,600'
-        // ] 
-        // mobileEmulation: { deviceName: 'iPhone X' }
+      // args: [
+      //   '--headless',
+      //   '--disable-gpu',
+      //   '--window-size=800,600'
+      // ]
+      // mobileEmulation: { deviceName: 'iPhone X' }
       // },
 
       // If outputDir is provided WebdriverIO can capture driver session logs
@@ -101,7 +109,7 @@ exports.config = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: "http://the-internet.herokuapp.com/",
+  baseUrl: url[process.env.ENV],
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,
@@ -155,8 +163,8 @@ exports.config = {
    * @param {Object} config wdio configuration object
    * @param {Array.<Object>} capabilities list of capabilities details
    */
-  onPrepare: function (config, capabilities) {
-      console.log('Starting Tests!')
+  onPrepare: function(config, capabilities) {
+    console.log("Starting Tests!");
   },
   /**
    * Gets executed just before initialising the webdriver session and test framework. It allows you
@@ -173,7 +181,7 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {Array.<String>} specs List of spec file paths that are to be run
    */
-  before: function (capabilities, specs) {
+  before: function(capabilities, specs) {
     browser.setWindowSize(1440, 900);
   },
   /**
