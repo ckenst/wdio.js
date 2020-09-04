@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ckenst/wdio5.js.git"
+    "url": "git+https://github.com/ckenst/wdio.js.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ckenst/wdio5.js/issues"
+    "url": "https://github.com/ckenst/wdio.js/issues"
   },
-  "homepage": "https://github.com/ckenst/wdio5.js#readme",
+  "homepage": "https://github.com/ckenst/wdio.js#readme",
   "devDependencies": {
     "@wdio/cli": "^5.23.0",
     "@wdio/local-runner": "^5.23.0",

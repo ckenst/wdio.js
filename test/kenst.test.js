@@ -8,7 +8,7 @@ describe("kenst.com loads", function() {
     browser.url("https://www.kenst.com/");
     let text = browser.getTitle();
     console.log("text is ", text);
-    assert.equal("Chris Kenst -", text);
+    assert.equal("Chris Kenst - Software Testing Techniques and Automation Strategies", text);
   });
 
   it("has the right url", () => {
