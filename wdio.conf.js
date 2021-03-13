@@ -17,9 +17,10 @@ exports.config = {
   runner: "local",
   //
   // Override default path ('/wd/hub') for chromedriver service.
-  hostname: "localhost",
-  port: 4444,
-  path: "/wd/hub",
+  // Hid this section to run on my local machine / not in docker container
+  // hostname: "localhost",
+  // port: 4444,
+  // path: "/wd/hub",
   //
   // ==================
   // Specify Test Files
