@@ -27,6 +27,7 @@
     "chromedriver": "^93.0.0",
     "minimist": "^1.2.3",
     "prettier": "^2.2.1",
+    "supertest": "^6.1.6",
     "wdio-chromedriver-service": "^7.0.0",
     "webdriverio": "^7.1.1"
   }
