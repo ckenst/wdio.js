@@ -2,7 +2,7 @@ const url = require('./urls')
 const ENV = process.env.ENV
 
 if(!ENV || !['qa', 'dev', 'staging'].includes(ENV)) {
-  console.log('Please us the following format when running the test script: ENV=qa|dev|staging')
+  console.log('Please specify the environment before running the test script: ENV=qa|dev|staging npm run test')
   process.exit()
 };
 
