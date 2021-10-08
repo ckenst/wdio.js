@@ -9,8 +9,8 @@ Note: This works by default if you don't have any other Selenium or ChromeDriver
 
 1. Start up the docker image for [Selenium Standalone Container](https://github.com/SeleniumHQ/docker-selenium):
 
-`docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:4.0.0-rc-2-prerelease-20210923`
+`docker run -d -p 4444:4444 --shm-size="2g" selenium/standalone-chrome:4.0.0-rc-2-20210930`
 
 2. Run all of the tests
 
-`npx wdio run ./wdio.conf.js`
+`ENV=qa npx wdio run ./wdio.conf.js`
