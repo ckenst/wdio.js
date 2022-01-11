@@ -1,4 +1,4 @@
 module.exports = {
-  qa: "http://the-internet.herokuapp.com",
+  qa: "https://www.saucedemo.com/",
   dev: "http:/localhost/"
 };
