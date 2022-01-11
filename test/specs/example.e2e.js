@@ -1,14 +1,13 @@
 const LoginPage = require('../pageobjects/login.page');
-const SecurePage = require('../pageobjects/secure.page');
+const InventoryPage = require('../pageobjects/inventory.page');
 
-describe('My Login application', () => {
+describe('My Demo application', () => {
     it('should login with valid credentials', async () => {
-        await LoginPage.open();
+        await LoginPage.open('');
 
-        await LoginPage.login('tomsmith', 'SuperSecretPassword!');
-        await expect(SecurePage.flashAlert).toBeExisting();
-        await expect(SecurePage.flashAlert).toHaveTextContaining(
-            'You logged into a secure area!');
+        await LoginPage.login('standard_user', 'secret_sauce');
+        await expect(InventoryPage.secondaryTitle).toHaveTextContaining(
+            'PRODUCTS');
     });
 });
 

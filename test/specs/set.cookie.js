@@ -1,36 +1,40 @@
-it('should set a cookie for the login', async () => {
+const LoginPage = require('../pageobjects/login.page');
 
-    // set a login cookie
-    await browser.setCookies({
-        name: 'session-username',
-        value: 'standard_user',
-        domain: 'www.saucedemo.com',
-        path: '/'
-    })
+describe('My Demo application', () => {
+    it('should set a cookie for the login', async () => {
+        await browser.setCookies({
+            name: 'session-username',
+            value: 'standard_user',
+            domain: 'www.saucedemo.com',
+            path: '/'
+        })
+    });
 
-})
-it('should access a pdp behind login', async () => {
-    await browser.url('https://www.saucedemo.com/inventory-item.html?id=4');
-    const productName = $('#inventory_item_container > div > div > div.inventory_details_desc_container > div.inventory_details_name.large_size');
-    await expect(productName).toHaveText('Sauce Labs Backpack');
-});
+    it('should access a pdp behind login', async () => {
+        await LoginPage.open('inventory-item.html?id=4');
 
-it('product added to cart', async () => {
-    const addToCart = $('#add-to-cart-sauce-labs-backpack');
-    await addToCart.click();
-    const cart = $('.shopping_cart_badge')
-    await expect(cart).toHaveText('1');
-});
+        const productName = $('#inventory_item_container > div > div > div.inventory_details_desc_container > div.inventory_details_name.large_size');
+        await expect(productName).toHaveText('Sauce Labs Backpack');
+    });
 
-it('should load cart', async () => {
-    await browser.url('https://www.saucedemo.com/cart.html');
-    const title = $('#header_container > div.header_secondary_container > span')
-    await expect(title).toHaveTextContaining('CART');
-});
+    it('product added to cart', async () => {
+        const addToCart = $('#add-to-cart-sauce-labs-backpack');
+        await addToCart.click();
+        const cart = $('.shopping_cart_badge')
+        await expect(cart).toHaveText('1');
+    });
 
-it('should go to checkout', async () => {
-    const checkout = $('#checkout');
-    await checkout.click();
-    const title = $('#header_container > div.header_secondary_container > span')
-    await expect(title).toHaveTextContaining('CHECKOUT');
-})
+    it('should load cart', async () => {
+        await LoginPage.open('cart.html');
+        
+        const title = $('#header_container > div.header_secondary_container > span')
+        await expect(title).toHaveTextContaining('CART');
+    });
+
+    it('should go to checkout', async () => {
+        const checkout = $('#checkout');
+        await checkout.click();
+        const title = $('#header_container > div.header_secondary_container > span')
+        await expect(title).toHaveTextContaining('CHECKOUT');
+    });
+}); 
