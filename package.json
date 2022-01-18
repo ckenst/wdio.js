@@ -25,6 +25,7 @@
     "ansi-regex": ">=5.0.1",
     "chai": "^4.3.4",
     "chromedriver": "^97.0.0",
+    "follow-redirects": ">=1.14.7",
     "minimist": "^1.2.3",
     "prettier": "^2.2.1",
     "supertest": "^6.1.6",
