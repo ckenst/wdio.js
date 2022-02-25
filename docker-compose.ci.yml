@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  selenium-tests:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: bash
+    stdin_open: true
+    tty: true
+    volumes:
+      - /app/node_modules
+      - .:/app
+    environment:
+      ENV: qa
+      JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps=
+

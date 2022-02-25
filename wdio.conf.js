@@ -119,6 +119,15 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     // services: ['selenium-standalone'],
+    services: [
+        ['selenium-standalone', {
+          drivers: { chrome: true },
+        }]
+      ],
+
+      hostname: 'localhost',
+      port: 4444,
+      path: '/wd/hub',
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
