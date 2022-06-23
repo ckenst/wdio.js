@@ -1,0 +1,16 @@
+FROM selenium/standalone-chrome:98.0
+
+RUN apt-get update -y \
+ && apt-get install -y --no-install-recommends \
+    curl \
+    nodejs \
+    npm
+
+WORKDIR /app
+
+COPY test ./test
+COPY jsconfig.json package.json package-lock.json ./
+
+RUN npm install
+
+ENTRYPOINT ["/usr/local/bin/npm", "run", "test:remote"]
