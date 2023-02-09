@@ -4,7 +4,7 @@
   "description": "Examples of [webdriver.io](http://webdriver.io/) in action.",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/.bin/wdio ./wdio.conf.js"
+    "test": "ENV=qa wdio ./wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -19,13 +19,13 @@
   "homepage": "https://github.com/ckenst/wdio.js#readme",
   "devDependencies": {
     "@wdio/cli": "^7.1.2",
-    "@wdio/local-runner": "^7.16.2",
+    "@wdio/local-runner": "^7.16.16",
     "@wdio/mocha-framework": "^7.16.1",
     "@wdio/spec-reporter": "^7.16.1",
     "ansi-regex": ">=5.0.1",
     "chai": "^4.3.4",
-    "chromedriver": "^97.0.0",
-    "follow-redirects": ">=1.14.8",
+    "chromedriver": "^99.0.0",
+    "follow-redirects": ">=1.14.9",
     "minimist": "^1.2.3",
     "prettier": "^2.2.1",
     "supertest": "^6.1.6",
