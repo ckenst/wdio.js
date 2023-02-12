@@ -18,16 +18,16 @@
   },
   "homepage": "https://github.com/ckenst/wdio.js#readme",
   "devDependencies": {
-    "@wdio/cli": "^7.26.0",
-    "@wdio/local-runner": "^7.26.0",
-    "@wdio/mocha-framework": "^7.26.0",
-    "@wdio/spec-reporter": "^7.26.0",
+    "@wdio/cli": "^8.3.5",
+    "@wdio/local-runner": "^8.3.5",
+    "@wdio/mocha-framework": "^8.3.0",
+    "@wdio/spec-reporter": "^8.3.0",
     "chai": "^4.3.7",
     "chromedriver": "^107.0.0",
     "minimist": "^1.2.7",
     "prettier": "^2.2.1",
     "supertest": "^6.3.1",
     "wdio-chromedriver-service": "^8.0.0",
-    "webdriverio": "^7.26.0"
+    "webdriverio": "^8.3.5"
   }
 }
