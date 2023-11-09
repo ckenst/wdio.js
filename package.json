@@ -23,7 +23,7 @@
     "@wdio/mocha-framework": "^7.26.0",
     "@wdio/spec-reporter": "^7.26.0",
     "chai": "^4.3.7",
-    "chromedriver": "^107.0.0",
+    "chromedriver": "^119.0.1",
     "minimist": "^1.2.7",
     "prettier": "^2.2.1",
     "supertest": "^6.3.1",
